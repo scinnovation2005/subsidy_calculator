@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Subsidy Calculation Form</title>
+  <script type="module" src="/main.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f4;
+    }
+    .container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      margin: auto;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="number"],
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #ffc107;
+      color: black;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #ffca2c;
+    }
+    .hidden {
+      display: none;
+    }
+    #status {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Subsidy Calculator</h2>
+
+    <form id="subsidyForm">
+      <div class="form-group">
+        <label>Name:</label>
+        <input type="text" name="Name" required>
+      </div>
+
+      <div class="form-group">
+        <label>Organization Name:</label>
+        <input type="text" name="Organization Name" required>
+      </div>
+
+      <div class="form-group">
+        <label>Enterprise Size:</label>
+        <select name="Enterprise Size" id="enterpriseSize" required>
+          <option value="">--Select--</option>
+          <option value="Startup">Startup</option>
+          <option value="Micro">Micro</option>
+          <option value="Small">Small</option>
+          <option value="Medium">Medium</option>
+          <option value="Large">Large</option>
+          <option value="Mega">Mega</option>
+          <option value="Ultra Mega">Ultra Mega</option>
+          <option value="Super Mega">Super Mega</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Select State:</label>
+        <select id="state" name="State" required>
+          <option value="">--Select State--</option>
+          <option value="Maharashtra">Maharashtra</option>
+          <option value="Uttar Pradesh">Uttar Pradesh</option>
+          <option value="Madhya Pradesh">Madhya Pradesh</option>
+          <option value="Punjab">Punjab</option>
+          <option value="Gujarat">Gujarat</option>
+          <option value="Tamil Nadu">Tamilnadu</option>
+          <option value="Karnataka">Karnataka</option>
+          <option value="Haryana">Haryana</option>
+          <option value="Rajasthan">Rajasthan</option>
+        </select>
+      </div>
+
+      <div id="stateFormArea"></div>
+
+      <button type="submit">Generate Report</button>
+    </form>
+
+    <div id="status"></div>
+  </div>
+</body>
+</html>
