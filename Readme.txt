@@ -4,7 +4,7 @@ project-root/
                     Enterprise size is asked since in some state(i.e. UP, Gujarat, Policies are based on Enterprise Size)
 │   ├── main.js     (pdf_path and url for pdf gnerated to frontend )
 │   ├── /state/.js (State specific inputs)
-│   └── assets/              # Images, fonts, etc. (optional)
+│ 
 │
 ├── backend/                 # Flask API code
 │   ├── subsidy_api.py (API to call process_/state/ function after selecting state)
