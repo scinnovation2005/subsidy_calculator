@@ -15,21 +15,17 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-#API Route
 @app.route("/subsidy", methods=["POST"])
 def calculate_subsidy():
     data = request.get_json(force=True)
     print('Received request', data)
 
-    #Compulsory inputs
     State = data.get("State")
     enterprise_size = data.get("Enterprise Size")
 
     if not State or not enterprise_size:
         return jsonify({"error": "Missing required fields in input"}), 400
-    
-    #State selection 
-    
+
     if State == "Rajasthan":
         result = process_rajasthan(data)
     elif State == "Haryana":
@@ -58,7 +54,7 @@ def calculate_subsidy():
 
 @app.route("/download_pdf/<filename>", methods=["GET"])
 def download_pdf(filename):
-    pdf_dir = os.path.join(os.getcwd(), "reports") #Reports are saved to reports folder 
+    pdf_dir = os.path.join(os.getcwd(), "reports")
     file_path = os.path.join(pdf_dir, filename)
 
     if not os.path.exists(file_path):

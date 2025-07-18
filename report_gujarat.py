@@ -1,21 +1,10 @@
+#Ask for stamp duty eligibility 
+
 # report_generator file
 import pandas as pd
-import subprocess
 import os
 
 def generate_report_gujarat(user_data, result, zone):
-
-    output_dir = "reports"
-    os.makedirs(output_dir, exist_ok=True)
-
-    safe_name = user_data.get("Name", "user").replace(" ", "_")
-    filename = f"{safe_name}_Subsidy_Report.pdf"
-    tex_filename = f"{safe_name}_Subsidy_Report.tex"
-
-    tex_path = os.path.join(output_dir, tex_filename)
-    pdf_path = os.path.join(output_dir, filename)
-
-    #Extract scaler values for report
     interest_eligibility_years = result.get('interest_eligibility_years', '')
     if interest_eligibility_years:
         interest_eligibility_years = f"{interest_eligibility_years} years"
@@ -143,22 +132,9 @@ policy and non-cooperation by client
 
 \\end{{document}}
 """
-    
-    with open(tex_path, "w", encoding="utf-8") as f:
+    with open("Subsidy_report_gujarat.tex", "w", encoding="utf-8") as f:
         f.write(tex_content)
 
-    result = subprocess.run(
-        ["pdflatex", "-interaction=nonstopmode", "-output-directory", output_dir, tex_path],
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
-        text=True
-    )
-
-    if result.returncode != 0:
-      log_file = os.path.join(output_dir, "pdflatex_error.log")
-      with open(log_file, "w") as f:
-        f.write("STDOUT:\n" + result.stdout + "\n\nSTDERR:\n" + result.stderr)
-      raise Exception(f"PDF generation failed. Details saved to {log_file}")
-
-    
-    return pdf_path
+    # Compile to PDF
+    os.system("pdflatex -interaction=nonstopmode Subsidy_report_gujarat.tex")
+    return "Subsidy_report_gujarat.pdf"

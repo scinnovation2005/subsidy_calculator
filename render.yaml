@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: subsidy_calculator
+    runtime: python
+    buildCommand: ""
+    startCommand: "python subsidy_calculator.py"
+    plan: free

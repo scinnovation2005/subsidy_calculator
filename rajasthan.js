@@ -2,7 +2,7 @@ import { rajasthanData } from './rajasthan_data.js';
 
 export function renderForm(container) {
   container.innerHTML = `
-    <h3>Rajasthan Details</h3>
+    <h3>Fill your Details here</h3>
 
     <div class="form-group">
       <label for="rajasthanDistrict">District:</label>
@@ -30,17 +30,19 @@ export function renderForm(container) {
     </div>
 
     <div class="form-group">
-      <label for="landOwned">Is land owned by legal entity?</label>
-      <select id="landOwned" name="Land Owned By Legal Entity?" required>
+      <label for="industryType">Industry Type:</label>
+      <select id="industryType" name="Industry Type" required>
         <option value="">Select</option>
-        <option value="Yes">Yes</option>
-        <option value="No">No</option>
+        <option value="Plastic Alternatives">Plastic Alternatives</option>
+        <option value="Agriculture processing">Agriculture processing</option>
+        <option value="Food processing">Food processing</option>
+        <option value="Other">Other</option>
       </select>
     </div>
 
-    <div class="form-group hidden" id="landCostGroup">
-      <label for="landCost">Land Cost:</label>
-      <input type="number" id="landCost" name="Land Cost">
+    <div class="form-group" id="turnoverField">
+      <label for="netTurnover">Net Turnover:</label>
+      <input type="number" id="netTurnover" name="Net Turnover">
     </div>
 
     <div class="form-group">
@@ -52,37 +54,21 @@ export function renderForm(container) {
       </select>
     </div>
 
-    <div class="form-group hidden" id="interestRateGroup">
-      <label for="interestRate">Interest Rate (%):</label>
-      <input type="number" id="interestRate" name="Interest Rate">
-    </div>
-
     <div class="form-group hidden" id="termloanAmount">
-      <label for="termloanAmount">Term Loan Amount:</label>
+      <label for="termloanAmountInput">Term Loan Amount:</label>
       <input type="number" id="termloanAmountInput" name="Term Loan Amount">
     </div>
 
     <div class="form-group">
-      <label for="netsgstpaidcashLedger">Net SGST Cash Ledger:</label>
-      <input type="number" id="netsgstpaidcashLedger" name="Net SGST Cash Ledger" required>
+      <label for="netsgstpaidcashLedger">Net SGST Paid Cash Ledger:</label>
+      <input type="number" id="netsgstpaidcashLedger" name="Net SGST Paid Cash Ledger" required>
     </div>
   `;
 
-  const termLoan = container.querySelector("#termLoan");
-  const interestRateGroup = container.querySelector("#interestRateGroup");
-  const termloanAmount = container.querySelector("#termloanAmount");
-
-  termLoan.addEventListener("change", () => {
-    const isYes = termLoan.value === "Yes";
-    interestRateGroup.classList.toggle("hidden", !isYes);
-    interestRateGroup.querySelector("input").required = isYes;
-
-    termloanAmount.classList.toggle("hidden", !isYes);
-    termloanAmount.querySelector("input").required = isYes;
-  });
-
   const districtSelect = container.querySelector("#rajasthanDistrict");
   const subdistrictSelect = container.querySelector("#rajasthanSubdistrict");
+  const termLoan = container.querySelector("#termLoan");
+  const termloanAmount = container.querySelector("#termloanAmount");
 
   districtSelect.addEventListener("change", () => {
     const selectedDistrict = districtSelect.value;
@@ -92,13 +78,10 @@ export function renderForm(container) {
       subdistricts.map(sd => `<option value="${sd.trim()}">${sd.trim()}</option>`).join("");
   });
 
-  const landOwned = container.querySelector("#landOwned");
-  const landCostGroup = container.querySelector("#landCostGroup");
-  const landCostInput = landCostGroup.querySelector("input");
-
-  landOwned.addEventListener("change", () => {
-    const showLandCost = landOwned.value === "Yes";
-    landCostGroup.classList.toggle("hidden", !showLandCost);
-    landCostInput.required = showLandCost;
+  termLoan.addEventListener("change", () => {
+    const isYes = termLoan.value === "Yes";
+    termloanAmount.classList.toggle("hidden", !isYes);
+    termloanAmount.querySelector("input").required = isYes;
   });
+
 }

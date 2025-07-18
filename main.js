@@ -1,13 +1,13 @@
 import { renderForm as renderMP } from './madhyapradesh.js';
-//import { renderForm as renderUPMSME } from './uttarpradesh_msme.js';
-//import { renderForm as renderUP } from './uttarpradesh.js';
+import { renderForm as renderUPMSME } from './uttarpradesh_msme.js';
+import { renderForm as renderUP } from './uttarpradesh.js';
 import { renderForm as renderPunjab } from './punjab.js';
-//import { renderForm as renderHaryana } from './haryana.js';
-//import { renderForm as renderTamilnadu } from './tamilnadu.js';
+import { renderForm as renderHaryana } from './haryana.js';
+import { renderForm as renderTamilnadu } from './tamilnadu.js';
 import { renderForm as renderKarnataka } from './karnataka.js';
-//import { renderForm as renderRajasthan } from './rajasthan.js';
-//import { renderForm as renderMaharshtra } from './maharashtra.js';
-//import { renderForm as renderGujarat } from './gujarat.js';
+import { renderForm as renderRajasthan } from './rajasthan.js';
+import { renderForm as renderMaharashtra } from './maharashtra.js';
+import { renderForm as renderGujarat } from './gujarat.js';
 
 const stateSelect = document.querySelector("#state");
 const stateFormArea = document.querySelector("#stateFormArea");
@@ -48,7 +48,7 @@ stateSelect.addEventListener("change", () => {
     renderKarnataka(stateFormArea);
   }
    else if (state === "Maharashtra"){
-    renderMaharshtra(stateFormArea);
+    renderMaharashtra(stateFormArea);
   }
   else if (state === "Rajasthan"){
     renderRajasthan(stateFormArea);
@@ -78,7 +78,7 @@ form.addEventListener("submit", async (e) => {
 
   try {
     console.log('Calling the api')
-    const response = await fetch("http://localhost:5000/subsidy", {
+    const response = await fetch("https://subsidy-calculator-1.onrender.com/subsidy", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data)
@@ -90,7 +90,7 @@ form.addEventListener("submit", async (e) => {
 
     if (result.report_path) {
       const filename = result.report_path.split("/").pop();
-      const downloadUrl = `http://localhost:5000/download_pdf/${filename}`;
+      const downloadUrl = `https://subsidy-calculator-1.onrender.com/download_pdf/${filename}`;
       statusDiv.innerHTML = `Report generated. <a href="${downloadUrl}" target="_blank" download>Click to download PDF</a>`;
     } else {
       statusDiv.innerHTML = `Error: ${result.error || "Unknown error"}`;
