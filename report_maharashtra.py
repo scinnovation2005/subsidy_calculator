@@ -58,8 +58,9 @@ Subsidy4India has identified various subsidies available for your organisation f
 \\section*{{Subsidy Breakdown}} 
 \\begin{{itemize}}[leftmargin=1.5em]
 \\item \\textbf{{(a) Capital investment subsidy (One-time):}} Based on the Maharashtra Industrial Policy 2019 and Package Scheme of Incentives (PSI-2019), the Investment Promotion Subsidy (IPS) is the primary capital subsidy mechanism designed to reimburse State Goods and Services Tax (SGST) paid by eligible industrial units on their first sale of products within Maharashtra. \\\\
-\\item \\textbf{{(b) Stamp Duty Waiver:}} The stamp duty exemption operates as a 100\\% waiver rather than a reimbursement, meaning eligible units are completely exempt from paying stamp duty during their investment period for specific transactions. \\\\
-Exemption applies to initial transactions only, not subsequent transfers. \\\\
+\\item \\textbf{{(b) Stamp Duty Subsidy:}} The stamp duty exemption operates as a 100\\% waiver rather than a reimbursement, meaning eligible units are completely exempt from paying stamp duty during their investment period for specific transactions. \\\\
+\\item Exemption available only during the designated investment period (typically 3-5 years). \\\\
+\\item Exemption applies to initial transactions only, not subsequent transfers. \\\\
 \\item \\textbf{{(c) Interest Subsidy (applicable only when a term loan is availed for the project):}} The Interest Subsidy under the Package Scheme of Incentives 2019 (PSI-2019) provides financial support by subsidizing interest paid on term loans for eligible industrial units with cap amount of electricity bills paid. \\\\
 \\end{{itemize}}
 
@@ -73,9 +74,9 @@ Capital Investment Subsidy & Rs. {latex_escape(result['capital_investment_subsid
 \\hline
 Interest subsidy & Rs. {latex_escape(result['interest_subsidy'])} & 7 years & Post production \\\\
 \\hline
-Stamp Duty Waiver & Rs. {latex_escape(result['stamp_duty_waive_off'])} & 100% waive off for eligible units & Applies to land acquisition and term loan agreements\\\\
+Stamp Duty Waiver & Rs. {latex_escape(result['stamp_duty_waive_off'])} & & \\\\
 \\hline 
-SGST Reimbursement & Rs. {latex_escape(result['sgst_reimbursement'])} & Equally reimburse over 10 years &  \\\\
+SGST Reimbursement & Rs. {latex_escape(result['sgst_reimbursement'])} & Equally reimburse over 10 years & \\\\
 \\hline
 \\end{{longtable}}
 
