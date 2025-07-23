@@ -61,10 +61,10 @@ Subsidy4India has identified various subsidies available for your organisation f
 \\begin{{itemize}}[leftmargin=1.5em]
   \\item \\textbf{{Capital investment subsidy (One-time):}} You can avail the capital subsidy only once after your unit starts commercial production, by applying online within three months.
   \\item \\textbf{{Stamp Duty exemption / reimbursement:}} Available during purchase of industrial land for the project. Reimbursement would be available only if the same entity bills the client when production starts.
-  \\item \\textbf{{Interest subsidy (if term loan availed):}} Zone A \\& B receive 5\\% interest subsidy for 5 years, Zone C \\& D receive 6\\% for 7 years.
-  \\item \\textbf{{SGST reimbursement:}} Available on SGST paid via cash ledger. Rate is {((sgst_initial_percent_report / 100) + (sgst_extended_percent_report / 100)) * 100:.2f}\\% of investment, totalling Rs. {result['sgst_reimbursement']} over {sgst_initial_years_report + sgst_extended_years_report} years.
-  \\item \\textbf{{Estimated receipt timeline:}} Each subsidy is sanctioned within ~90 days, disbursed within 3–6 months depending on fund availability. SGST reimbursement is annual post-GSTR-9 filing.
-\\end{{itemize}}
+  \\item \\textbf{{Interest subsidy (if term loan availed):}} Zone A \\& B receive 5\\% interest subsidy for 5 years, Zone C \\& D receive 6\\% for 7 years. 
+  \\item \\textbf{{SGST reimbursement:}}  SGST Reimbursement Rate is {((sgst_initial_percent_report / 100) + (sgst_extended_percent_report / 100)) * 100:.2f}\\% of investment, totalling Rs. {result['sgst_reimbursement']} over {sgst_initial_years_report + sgst_extended_years_report} years.
+  \\item Interest subsidy is available for \\textbf{{Micro \\& Small}} Enterprises only.
+  \\end{{itemize}}
 
 \\section*{{Costing Table}}
 \\begin{{longtable}}{{|p{{4cm}}|p{{4cm}}|p{{4cm}}|p{{4cm}}|}}
@@ -82,6 +82,12 @@ SGST reimbursement & Rs. {result['sgst_reimbursement']} & Disbursed over {sgst_i
 \\end{{longtable}}
 
 \\textbf{{Total estimated subsidy available: Rs. {result['total_subsidy']}.}}
+
+\\section*{{Estimated receipt timeline}} 
+  \\begin{{itemize}}[leftmargin=1.5em]
+    Each subsidy is sanctioned within ~90 days, disbursed within 3–6 months depending on fund availability. SGST reimbursement is annual post-GSTR-9 filing.
+  \\end{{itemize}}
+
 
 \\section*{{How will SCPL ensure the subsidy gets into your bank account?}}
 \\begin{{itemize}}[leftmargin=1.5em]
