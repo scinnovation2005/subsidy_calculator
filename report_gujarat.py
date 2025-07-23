@@ -89,7 +89,7 @@ Subsidy4India has identified various subsidies available for your organisation f
     \\hline
     \\textbf{{Subsidy head}} & \\textbf{{Total subsidy}} & \\textbf{{No. of years}} & \\textbf{{Assumption}} \\\\
     \\hline
-    Capital Investment Subsidy & Rs. {result['capital_investment_subsidy']} & One Time years & Post production \\\\
+    Capital Investment Subsidy & Rs. {result['capital_investment_subsidy']} & One Time years & Available only for Micro and Large Enterprises \\\\
     \\hline
     SGST reimbursement & Rs. {result['sgst_reimbursement']} & Disbursed over {{{sgst_eligibility_years}}} & Paid from cash ledger \\\\
     \\hline
