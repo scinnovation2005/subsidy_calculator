@@ -7,7 +7,6 @@ df.columns = df.columns.str.strip()
 df['Subdistrict'] = df['Subdistrict'].str.strip().str.lower()
 
 # Zone data
-## Not adding thrust sectors in calculations
 zone_data = {
 #Zone A: Category I Taluka
 #Zone B: Category II Taluka
@@ -59,8 +58,8 @@ def calculate_subsidy(zone, enterprise_size, plant_machinery, building_civil_wor
     sgst_reimbursement = 0 
     interest_subsidy = 0 
 
-    # Capital Subsidy (available for Micro & Mega)
-    # Available only for enterprises 
+    # Capital Subsidy 
+    
     capital_subsidy_rate = zone_info["Capital Subsidy(%)"][index] 
     capital_subsidy = capital_subsidy_rate/100 * capital_investment
 
@@ -75,7 +74,7 @@ def calculate_subsidy(zone, enterprise_size, plant_machinery, building_civil_wor
     sgst_reimbursement = min(sgst_amount, sgst_reimbursement_max)
 
     # Stamp Duty Subsidy
-    # Confirm this for Large
+    
     if enterprise_size in ["Micro", "Small", "Medium", "Mega"]: #100% stamp duty
         stamp_duty_subsidy = land_cost * 0.07 
     else: 
