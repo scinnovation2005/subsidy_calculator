@@ -61,14 +61,8 @@ export function renderForm(container) {
       <label for="termloanAmount">Term Loan Amount:</label>
       <input type="number" id="termloanAmountInput" name="Term Loan Amount">
     </div>
-
-    <div class="form-group">
-      <label for="netsgstpaidcashLedger">Net SGST Paid Cash Ledger:</label>
-      <input type="number" id="netsgstpaidcashLedger" name="Net SGST Paid Cash Ledger" required>
-    </div>
-    
   `;
-  //Handles term logic
+  //Handle term loan logic
   const termLoan = container.querySelector("#termLoan");
   const interestRateGroup = container.querySelector("#interestRateGroup");
   const termloanAmount = container.querySelector("#termloanAmount");
