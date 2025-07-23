@@ -97,6 +97,7 @@ def calculate_subsidy(zone, enterprise_size, plant_machinery, building_civil_wor
 
     # Total subsidy 
     total_subsidy = capital_subsidy + sgst_reimbursement + stamp_duty_subsidy + interest_subsidy
+    print("A: ", total_subsidy)
         
     return {
         "capital_subsidy_rate": capital_subsidy_rate ,
@@ -143,6 +144,7 @@ def process_gujarat(data):
             land_cost,
             term_loan_amount
         )
+        print("R", result)
 
         # Generate report
         pdf_path = generate_report_gujarat(data, result, zone)
