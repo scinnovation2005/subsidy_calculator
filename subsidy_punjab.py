@@ -32,15 +32,11 @@ def calculate_subsidy(enterprise_size, plant_machinery, building_civil_work, lan
     
     if enterprise_size in ["Micro", "Small", "Medium"]:
         interest_subsidy = min(term_loan_amount * 0.05  , 1000000) * 3
-    elif enterprise_size == "Startup":  
-        interest_subsidy = min(term_loan_amount * 0.08  , 500000) * 3
     else: 
         interest_subsidy = 0
 
     # SGST Reimbursement (Eligibility 5 years )
-    if enterprise_size == "Startup":  
-        sgst_reimbursement = capital_investment * 5
-    elif enterprise_size == "Small":
+    if enterprise_size == "Small":
         sgst_reimbursement = min(0.60 * capital_investment, 0.60 * capital_investment) * 5
     elif enterprise_size == "Micro":
         sgst_reimbursement = min(0.70 * capital_investment, 0.70 * capital_investment) * 5 

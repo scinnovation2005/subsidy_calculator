@@ -127,13 +127,6 @@ export const haryanaData = {
             "Dahina",
             "Nahar"
         ],
-        " Rohtak": [
-            " Rohtak",
-            " Meham",
-            " Sampla",
-            " Kalanaur",
-            " Lakhan Majra"
-        ],
         " Sirsa": [
             " Sirsa",
             " Dabwali",

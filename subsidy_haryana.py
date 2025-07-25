@@ -27,7 +27,8 @@ def calculate_subsidy(zone, enterprise_size, plant_machinery, building_civil_wor
                       term_loan_amount):
 
     zone_info = zone_df[zone_df["Zone"] == zone].iloc[0]
-    enterprise_size = enterprise_size.strip().capitalize()
+    enterprise_size = enterprise_size.strip()
+
     capital_investment = plant_machinery + building_civil_work
     print("Capital investment", capital_investment)
 
