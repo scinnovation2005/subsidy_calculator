@@ -50,9 +50,14 @@ def calculate_subsidy(zone, plant_machinery, building_civil_work, land_cost,
     interest_subsidy = term_loan_amount * (zone_info["Interest rate"]/100) * (zone_info["Interest eligibility years"])
 
     # SGST Reimbursement
-    capital_subsidy_per_year = capital_subsidy / (zone_info["SGST Eligible years"])
-    capital_investment_per_year = capital_investment / (zone_info["SGST Eligible years"])
-    sgst_reimbursement = min(capital_subsidy_per_year, capital_investment_per_year) * (zone_info["SGST Eligible years"])
+    if zone == "A":
+        capital_subsidy_per_year = 0 
+        capital_investment_per_year = 0 
+        sgst_reimbursement = 0
+    else:
+        capital_subsidy_per_year = capital_subsidy / (zone_info["SGST Eligible years"])
+        capital_investment_per_year = capital_investment / (zone_info["SGST Eligible years"])
+        sgst_reimbursement = min(capital_subsidy_per_year, capital_investment_per_year) * (zone_info["SGST Eligible years"])
 
     # Total subsidy 
     total_subsidy = capital_subsidy + sgst_reimbursement + stamp_duty_waive_off + interest_subsidy
