@@ -1,5 +1,3 @@
-#Ask for stamp duty eligibility 
-
 # report_generator file
 import pandas as pd
 import os
@@ -16,7 +14,7 @@ def generate_report_gujarat(user_data, result, zone):
     safe_name1 = user_data.get("State", "user").replace(" ", "_")
     safe_name2 = user_data.get("Enterprise Size", "user").replace(" ", "_")
     filename = f"{safe_name}_{safe_name1}_{safe_name2}_Subsidy_Report.pdf"
-    tex_filename = f"{safe_name}_Subsidy_Report.tex"
+    tex_filename = f"{safe_name}_{safe_name1}_{safe_name2}_Subsidy_Report.tex"
 
     tex_path = os.path.join(output_dir, tex_filename)
     pdf_path = os.path.join(output_dir, filename)
@@ -31,15 +29,15 @@ def generate_report_gujarat(user_data, result, zone):
 
     sgst_max_rate = result.get('sgst_max_rate', '')
     if sgst_max_rate:
-        sgst_max_rate =f"{sgst_max_rate}\\%"
+        sgst_max_rate = f"{sgst_max_rate}\\%"
 
     sgst_rate = result.get('sgst_rate', '')
     if sgst_rate:
-        sgst_rate=f"{sgst_rate}\\%"
+        sgst_rate = f"{sgst_rate}\\%"
 
     sgst_eligibility_years = result.get('sgst_eligibility_years', '')
     if sgst_eligibility_years:
-        sgst_eligibility_years=f"{sgst_eligibility_years} years"
+        sgst_eligibility_years = f"{sgst_eligibility_years} years"
 
     tex_content = f"""
 \\documentclass[11pt]{{article}}
@@ -48,6 +46,7 @@ def generate_report_gujarat(user_data, result, zone):
 \\usepackage{{array}}
 \\usepackage{{longtable}}
 \\usepackage{{enumitem}}
+\\setlist[itemize]{{leftmargin=1.5em}}
 
 \\begin{{document}}
 
@@ -55,66 +54,66 @@ def generate_report_gujarat(user_data, result, zone):
 \\Huge\\textbf{{Subsidy4India, a venture of SCPL}}\\\\[0.5em]
 \\large 305, Regent Chambers, Nariman Point, Mumbai 400021 (INDIA)\\\\
 Offices in New Delhi \\& New York\\\\
-
 \\end{{center}}
 
 \\textbf{{Date: {pd.Timestamp.now().strftime('%d-%m-%Y')}}}
 
 \\vspace{{1em}}
 \\begin{{itemize}}
-    \item {user_data['Organization Name']} \\
-    \item {user_data['Subdistrict']}, {user_data['District']}, {user_data['State']} \\
+    \\item {user_data['Organization Name']} \\\\
+    \\item {user_data['Subdistrict']}, {user_data['District']}, {user_data['State']} \\\\
 \\end{{itemize}}
+
 \\textbf{{Attn.:}} {user_data['Name']}
 
 \\section*{{Overview}}
 Subsidy4India has identified various subsidies available for your organisation for your manufacturing unit in {user_data['District']}, {user_data['Subdistrict']} \\& {user_data['State']} and sharing the evaluation report for your perusal which is located in Zone \\textbf{{{zone}}}.
-\\begin{{itemize}}[leftmargin=1.5em]
+\\begin{{itemize}}
   \\item \\textbf{{Name of Scheme:}} Atmanirbhar Gujarat Scheme
   \\item \\textbf{{Base of subsidy:}} Subsidy schemes applicable to your company as a MSME / Large / Mega entity
   \\item \\textbf{{Estimated subsidy value:}} Each subsidy has been mentioned in detail in the proposal.
   \\item \\textbf{{Date of start of commercial production:}} Within the policy period (5 October 2022 - 4 October 2027).
 \\end{{itemize}}
 
-\\section*{{Subsidy Breakdown}} 
+\\section*{{Subsidy Breakdown}}
 
 \\item \\textbf{{Asset Creation Incentives}} \\\\
-\\begin{{itemize}}[leftmargin=1.5em]
-    \\textbf{{(a)Capital Investment Subsidy (One-time): }}According to MSME Policy 2024, Plastic alternative, Agricultural and Food processing industries will get subsidy 50\\% of their capital investment with the cap of Rs. 40 lakhs and Rs. 1.5 Crore respectively. \\\\
-    \\textbf{{(b)SGST reimbursement: }}Kindly note that you can avail SGST reimbursement of {{{sgst_rate}}} on the capital investment for {{{sgst_eligibility_years}}} with the annual cap of {{{sgst_max_rate}}} of Fixed Capital Investment. \\\\
-    \\textbf{{(c)Stamp Duty Subsidy (One-time): }}Under the Aatma nirbhar Gujarat Scheme, the government provides a \\textbf{{100\\% reimbursement of stamp duty and registration charges}} paid to the Government of Gujarat for the purchase and/or lease of land meant for eligible industrial projects under MEMS and Mega Enterprises only.\\\\
-    \\textbf{{(d)Interest Subsidy(applicable only when a term loan is availed for the project): }}Interest Subsidy is available at {{{interest_rate}}} of term loan amount for {{{interest_eligibility_years}}}. \\\\
+\\begin{{itemize}}
+    \\item \\textbf{{(a) Capital Investment Subsidy (One-time): }} According to MSME Policy 2024, Plastic alternative, Agricultural and Food processing industries will get subsidy 50\\% of their capital investment with the cap of Rs. 40 lakhs and Rs. 1.5 Crore respectively. \\\\
+    \\item \\textbf{{(b) SGST reimbursement: }} Kindly note that you can avail SGST reimbursement of {sgst_rate} on the capital investment for {sgst_eligibility_years} with the annual cap of {sgst_max_rate} of Fixed Capital Investment. \\\\
+    \\item \\textbf{{(c) Stamp Duty Subsidy (One-time): }} Under the Aatma nirbhar Gujarat Scheme, the government provides a \\textbf{{100\\% reimbursement of stamp duty and registration charges}} paid to the Government of Gujarat for the purchase and/or lease of land meant for eligible industrial projects under MEMS and Mega Enterprises only. \\\\
+    \\item \\textbf{{(d) Interest Subsidy (applicable only when a term loan is availed for the project): }} Interest Subsidy is available at {interest_rate} of term loan amount for {interest_eligibility_years}. \\\\
 \\end{{itemize}}
-    
+
 \\section*{{Subsidy Snapshot}}
-    \\begin{{longtable}}{{|p{{4cm}}|p{{4cm}}|p{{4cm}}|p{{4cm}}|}}
-    \\hline
-    \\textbf{{Subsidy head}} & \\textbf{{Total subsidy}} & \\textbf{{No. of years}} & \\textbf{{Assumption}} \\\\
-    \\hline
-    Capital Investment Subsidy & Rs. {result['capital_investment_subsidy']} & One Time years & Available only for Micro and Large Enterprises \\\\
-    \\hline
-    SGST reimbursement & Rs. {result['sgst_reimbursement']} & Disbursed over {{{sgst_eligibility_years}}} & Paid from cash ledger \\\\
-    \\hline
-    Stamp Duty Subsidy & Rs. {result['stamp_duty_subsidy']} & One Time & Available only for MSME and Mega Enterprises \\\\
-    \\hline
-    Interest Subsidy & Rs. {result['interest_subsidy']} & {{{interest_eligibility_years}}} & Post production\\\\
-    \\hline 
-    \\end{{longtable}}
+\\begin{{longtable}}{{|p{{4cm}}|p{{4cm}}|p{{4cm}}|p{{4cm}}|}}
+\\hline
+\\textbf{{Subsidy head}} & \\textbf{{Total subsidy}} & \\textbf{{No. of years}} & \\textbf{{Assumption}} \\\\
+\\hline
+Capital Investment Subsidy & Rs. {result['capital_investment_subsidy']} & One Time years & Available only for Micro and Large Enterprises \\\\
+\\hline
+SGST reimbursement & Rs. {result['sgst_reimbursement']} & Disbursed over {sgst_eligibility_years} & Paid from cash ledger \\\\
+\\hline
+Stamp Duty Subsidy & Rs. {result['stamp_duty_subsidy']} & One Time & Available only for MSME and Mega Enterprises \\\\
+\\hline
+Interest Subsidy & Rs. {result['interest_subsidy']} & {interest_eligibility_years} & Post production \\\\
+\\hline
+\\end{{longtable}}
 
 \\textbf{{Total estimated subsidy available is Rs. {result['total_subsidy']}.}}
 
-\\section*{{Other Key Subsidies \\& Incentives}} \\\\
+\\section*{{Other Key Subsidies \\& Incentives}}
 
-\\section*{{Estimated Date of receipt }}  \\\\
+\\section*{{Estimated Date of receipt}}
 There will be a sanction provided for each of the subsidy 
 application made which is sanctioned in upto 90 days and then disbursed as per funds 
 availability with the Govt. Department and ranges from 3 months to 6 months from the 
-date of sanction of the subsidy application.  \\\\
-\\\\
+date of sanction of the subsidy application. \\\\
+
 In the case of SGST reimbursement, the company needs to file for the same every 
 year post filing of annual GST return i.e. GSTR9 after which the SGST reimbursement 
 is made ranging from 3 months to 6 months from the date of filing SGST 
-reimbursement application. 
+reimbursement application.
 \\end{{itemize}}
 
 \\section*{{How will SCPL ensure the subsidy gets into your bank account? }}
@@ -126,7 +125,7 @@ reimbursement application.
     every step
 \\end{{itemize}}
 
-\\section*{{Value Added Services }} 
+\\section*{{Value Added Services}} 
 \\begin{{itemize}}
     \\item Preparation of Detailed Project Report (DPR)  
     \\item Market Research to plan your Go To Market Strategy  
@@ -153,7 +152,7 @@ reimbursement application.
 
 \\end{{document}}
 """
-    
+
     with open(tex_path, "w", encoding="utf-8") as f:
         f.write(tex_content)
 
@@ -176,11 +175,8 @@ reimbursement application.
                 raise Exception("PDF generation failed. LaTeX error logged to console.")
             else:
                 print("PDF was generated despite warnings.")
-
-
     except FileNotFoundError:
         raise Exception("pdflatex command not found. Is LaTeX installed in your container?")
-
     except Exception as e:
         print("Unexpected error while generating PDF:", str(e))
         traceback.print_exc()
