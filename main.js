@@ -92,7 +92,7 @@ form.addEventListener("submit", async (e) => {
 
   try {
     console.log('Calling the api')
-    const response = await fetch("https://subsidy-calculator-1.onrender.com/subsidy", {
+    const response = await fetch("https://subsidy-calculator-z5wq.onrender.com/subsidy", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data)
@@ -104,7 +104,7 @@ form.addEventListener("submit", async (e) => {
 
     if (result.report_path) {
       const filename = result.report_path.split("/").pop();
-      const downloadUrl = `https://subsidy-calculator-1.onrender.com/download_pdf/${filename}`;
+      const downloadUrl = `https://subsidy-calculator-z5wq.onrender.com/download_pdf/${filename}`;
       
       clearInterval(interval);
       progressBar.value = 100;
