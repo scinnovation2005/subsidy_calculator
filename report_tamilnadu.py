@@ -61,7 +61,7 @@ Subsidy4India has identified various subsidies available for your organisation f
 \\section*{{Subsidy Breakdown}} 
 \\begin{{itemize}}[leftmargin=1.5em]
   \\item \\textbf{{(a) Capital investment subsidy (One-time):}} According to Industrial Policy 2025, you can avail capital subsidy only once post production which is disbursed over eligible years.
-  \\item \\textbf{{(b) SGST reimbursement:}} SGST reimbursement calculation will be strictly available on SGST paid from cash ledger as per GSTR9 filed annually. Eligible enterprises will get SGST reimbursement for 15 years.
+  \\item \\textbf{{(b) SGST reimbursement:}} SGST reimbursement calculation will be strictly available on capital investment made. Eligible enterprises will get SGST reimbursement for 15 years.
   \\item \\textbf{{(c) Interest Subsidy (applicable only when a term loan is availed for the project):}} Interest subsidy is available for 5 years for MSMEs and 6 years for large/mega projects.
 \\end{{itemize}}
 

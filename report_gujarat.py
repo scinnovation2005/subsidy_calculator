@@ -81,7 +81,7 @@ Subsidy4India has identified various subsidies available for your organisation f
 \\item \\textbf{{Asset Creation Incentives}} \\\\
 \\begin{{itemize}}[leftmargin=1.5em]
     \\textbf{{(a)Capital Investment Subsidy (One-time): }}According to MSME Policy 2024, Plastic alternative, Agricultural and Food processing industries will get subsidy 50\\% of their capital investment with the cap of Rs. 40 lakhs and Rs. 1.5 Crore respectively. \\\\
-    \\textbf{{(b)SGST reimbursement: }}Kindly note that you can avail SGST reimbursement of {{{sgst_rate}}} on the SGST paid for {{{sgst_eligibility_years}}} with the annual cap of {{{sgst_max_rate}}} of Fixed Capital Investment. \\\\
+    \\textbf{{(b)SGST reimbursement: }}Kindly note that you can avail SGST reimbursement of {{{sgst_rate}}} on the capital investment for {{{sgst_eligibility_years}}} with the annual cap of {{{sgst_max_rate}}} of Fixed Capital Investment. \\\\
     \\textbf{{(c)Stamp Duty Subsidy (One-time): }}Under the Aatma nirbhar Gujarat Scheme, the government provides a \\textbf{{100\\% reimbursement of stamp duty and registration charges}} paid to the Government of Gujarat for the purchase and/or lease of land meant for eligible industrial projects under MEMS and Mega Enterprises only.\\\\
     \\textbf{{(d)Interest Subsidy(applicable only when a term loan is availed for the project): }}Interest Subsidy is available at {{{interest_rate}}} of term loan amount for {{{interest_eligibility_years}}}. \\\\
 \\end{{itemize}}

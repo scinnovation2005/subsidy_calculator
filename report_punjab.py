@@ -57,7 +57,7 @@ Subsidy4India has identified various subsidies available for your organisation f
   \\item \\textbf{{Capital investment subsidy (One-time):}} Based on Fixed Capital Investment and scheme parameters.
   \\item \\textbf{{Stamp Duty exemption / reimbursement:}} 100\\% exemption/reimbursement on eligible transactions.
   \\item \\textbf{{Interest subsidy:}} Applicable based on enterprise type and location.
-  \\item \\textbf{{SGST reimbursement:}} Calculated on net SGST paid from cash ledger as per GSTR9.
+  \\item \\textbf{{SGST reimbursement:}} Calculated on capital investment made.
 \\end{{itemize}}
 
 \\section*{{Subsidy Snapshot}}
