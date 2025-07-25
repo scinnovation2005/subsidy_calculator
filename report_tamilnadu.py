@@ -7,7 +7,7 @@ def generate_report_tamilnadu(user_data, result, zone):
     os.makedirs(output_dir, exist_ok=True)
 
     # A safe filename based on user's information
-    safe_name = user_data.get("Organisation Name", "user").replace(" ", "_")
+    safe_name = user_data.get("Organization Name", "user").replace(" ", "_")
     safe_name1 = user_data.get("State", "user").replace(" ", "_")
     safe_name2 = user_data.get("Enterprise Size", "user").replace(" ", "_")
     filename = f"{safe_name}_{safe_name1}_{safe_name2}_Subsidy_Report.pdf"
@@ -50,7 +50,7 @@ Offices in New Delhi \\& New York\\\\
 \\end{{itemize}}
 
 \\section*{{Overview}}
-Subsidy4India has identified various subsidies available for your organisation for your manufacturing unit in {user_data['District']}, {user_data['State']} and sharing the evaluation report for your perusal which is located in Zone \\textbf{{{zone}}}.
+Subsidy4India has identified various subsidies available for your Organization for your manufacturing unit in {user_data['District']}, {user_data['State']} and sharing the evaluation report for your perusal which is located in Zone \\textbf{{{zone}}}.
 \\begin{{itemize}}[leftmargin=1.5em]
   \\item \\textbf{{Name of Scheme:}} Tamil Nadu Industrial Policy 2021
   \\item \\textbf{{Base of subsidy:}} Subsidy schemes applicable to your company as a MSME / Large / Mega entity

@@ -13,7 +13,7 @@ def generate_report_maharashtra(user_data, result, zone):
     os.makedirs(output_dir, exist_ok=True)
 
     # A safe filename based on user's information
-    safe_name = user_data.get("Organisation Name", "user").replace(" ", "_")
+    safe_name = user_data.get("Organization Name", "user").replace(" ", "_")
     safe_name1 = user_data.get("State", "user").replace(" ", "_")
     safe_name2 = user_data.get("Enterprise Size", "user").replace(" ", "_")
     filename = f"{safe_name}_{safe_name1}_{safe_name2}_Subsidy_Report.pdf"
@@ -52,9 +52,8 @@ Offices in New Delhi \\& New York\\\\
 \\end{{itemize}}
 
 \\section*{{Overview}}
-Subsidy4India has identified various subsidies available for your organisation for your manufacturing unit in {latex_escape(user_data['District'])}, {latex_escape(user_data['Subdistrict'])} \\& {latex_escape(user_data['State'])} and sharing the evaluation report for your perusal which is located in Zone \\textbf{{{latex_escape(zone)}}}.
+Subsidy4India has identified various subsidies available for your Organization for your manufacturing unit in {latex_escape(user_data['District'])}, {latex_escape(user_data['Subdistrict'])} \\& {latex_escape(user_data['State'])} and sharing the evaluation report for your perusal which is located in Zone \\textbf{{{latex_escape(zone)}}}.
 \\begin{{itemize}}
-
   \\item \\textbf{{Name of Scheme:}} Maharashtra Industrial Policy 2019
   \\item \\textbf{{Base of subsidy:}} Subsidy schemes applicable to your company as a MSME / Large / Mega entity
   \\item \\textbf{{Estimated subsidy value:}} Each subsidy has been mentioned in detail in the proposal.
