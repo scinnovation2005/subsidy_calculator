@@ -46,9 +46,9 @@ Offices in New Delhi \\& New York\\\\
 
 \\vspace{{1em}}
 \\begin{{itemize}}
-    \\textbf{{Organization:}} {latex_escape(user_data['Organization Name'])} \\\\
-    \\textbf{{Location:}} {latex_escape(user_data['Subdistrict'])}, {latex_escape(user_data['District'])}, {latex_escape(user_data['State'])} \\\\
-    \\textbf{{Attn.:}} {latex_escape(user_data['Name'])}
+    \\item \\textbf{{Organization:}} {latex_escape(user_data['Organization Name'])} \\\\
+    \\item \\textbf{{Location:}} {latex_escape(user_data['Subdistrict'])}, {latex_escape(user_data['District'])}, {latex_escape(user_data['State'])} \\\\
+    \\item \\textbf{{Attn.:}} {latex_escape(user_data['Name'])}
 \\end{{itemize}}
 
 \\section*{{Overview}}
