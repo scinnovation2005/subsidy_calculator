@@ -66,7 +66,21 @@ document.querySelector("#enterpriseSize").addEventListener("change", () => {
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
-  statusDiv.innerHTML = "Processing...";
+  
+  const progressContainer = document.querySelector("#progressContainer");
+  const progressBar = document.querySelector("#progressBar");
+
+  // Show the progress bar
+  progressContainer.style.display = "block";
+  progressBar.value = 0;
+
+  // Simulate progress incrementally
+  let progress = 0;
+  const interval = setInterval(() => {
+    progress = Math.min(progress + Math.random() * 10, 90); // random progress till 90%
+    progressBar.value = progress;
+  }, 300);
+
 
   const formData = new FormData(form);
   const data = {};
@@ -78,7 +92,7 @@ form.addEventListener("submit", async (e) => {
 
   try {
     console.log('Calling the api')
-    const response = await fetch("https://subsidy-calculator-z5wq.onrender.com/subsidy", {
+    const response = await fetch("https://subsidy-calculator-1.onrender.com/subsidy", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data)
@@ -90,13 +104,45 @@ form.addEventListener("submit", async (e) => {
 
     if (result.report_path) {
       const filename = result.report_path.split("/").pop();
-      const downloadUrl = `https://subsidy-calculator-z5wq.onrender.com/download_pdf/${filename}`;
-      statusDiv.innerHTML = `Report generated. <a href="${downloadUrl}" target="_blank" download>Click to download PDF</a>`;
+      const downloadUrl = `https://subsidy-calculator-1.onrender.com/download_pdf/${filename}`;
+      
+      clearInterval(interval);
+      progressBar.value = 100;
+
+      setTimeout(() => {
+        progressContainer.style.display = "none";
+        statusDiv.innerHTML = `Report generated. <a href="${downloadUrl}" target="_blank" download>Click to download PDF</a>`;
+      }, 500); // small delay to show 100% progress
+
     } else {
+      progressContainer.style.display = "none";
       statusDiv.innerHTML = `Error: ${result.error || "Unknown error"}`;
     }
   } catch (err) {
-    console.error(err);
-    statusDiv.innerHTML = "Something went wrong!";
+      clearInterval(interval);
+      progressContainer.style.display = "none";
+      console.error(err);
+      statusDiv.innerHTML = "Something went wrong while generating the report.";
   }
+  
 });
+
+// === Industry Type: Show/Hide "Other" Input ===
+  const industryTypeSelect = document.querySelector("#industryType");
+  const otherIndustryContainer = document.querySelector("#otherIndustryContainer");
+  const otherIndustryInput = document.querySelector("#otherIndustry");
+
+  function toggleOtherInput() {
+    const selected = industryTypeSelect.value;
+    if (selected === "Other") {
+      otherIndustryContainer.classList.add("show");
+      otherIndustryInput.required = true;
+    } else {
+      otherIndustryContainer.classList.remove("show");
+      otherIndustryInput.value = "";
+      otherIndustryInput.required = false;
+    }
+  }
+
+  // Attach event listener
+  industryTypeSelect.addEventListener("change", toggleOtherInput);
