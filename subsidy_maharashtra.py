@@ -1,5 +1,6 @@
 import pandas as pd
 from report_maharashtra import generate_report_maharashtra
+import math
 
 # Load Zone Mapping Data
 df = pd.read_csv("Maharashtra_zone.csv") 
@@ -67,7 +68,15 @@ def calculate_subsidy(zone, plant_machinery, building_civil_work, land_cost,
         "interest_subsidy": round(interest_subsidy, 2),
         "sgst_reimbursement": round(sgst_reimbursement, 2),
         "total_subsidy": round(total_subsidy, 2)
-    }    
+    }
+
+def clean_for_json(obj):
+    if isinstance(obj, dict):
+        return {k: clean_for_json(v) for k, v in obj.items()}
+    elif isinstance(obj, float) and (math.isnan(obj) or math.isinf(obj)):
+        return None
+    else:
+        return obj    
 
 def process_maharashtra(data):
     try:        
