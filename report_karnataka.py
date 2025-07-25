@@ -57,7 +57,10 @@ Subsidy4India has identified various subsidies available for your organisation f
 \\begin{{itemize}}[leftmargin=1.5em]
     \\textbf{{1. Asset Creation Incentives (You can choose only one of the following)}}
     \\textbf{{(a) Capital investment subsidy (One-time):}} According to MSME Policy 2024, Plastic alternative, Agricultural and Food processing industries will get subsidy 50\\% of their capital investment with the cap of Rs. 40 lakhs and Rs. 1.5 Crore respectively.
-    \\textbf{{(b) SGST reimbursement:}} Kindly note that you can avail SGST reimbursement on the capital iinvestment for 7 years. SGST reimbursement calculation will be strictly available on capital investment made.
+    \\textbf{{(b) SGST reimbursement:}} Kindly note that you can avail SGST reimbursement on the capital investment for 7 years. SGST reimbursement calculation will be strictly available on capital investment made.
+\\end{{itemize}}
+
+\\begin{{longtable}}{{|p{{4.5cm}}|p{{4.5cm}}|p{{2.5cm}}|p{{4.5cm}}|}}
 \\hline
 \\textbf{{Subsidy head}} & \\textbf{{Total subsidy}} & \\textbf{{Years}} & \\textbf{{Remarks}} \\\\
 \\hline

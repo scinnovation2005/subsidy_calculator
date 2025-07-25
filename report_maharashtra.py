@@ -31,6 +31,7 @@ def generate_report_maharashtra(user_data, result, zone):
 \\usepackage{{array}}
 \\usepackage{{longtable}}
 \\usepackage{{enumitem}}
+\\setlist[itemize]{{leftmargin=1.5em}}
 \\usepackage{{graphicx}}
 
 \\begin{{document}}
@@ -52,7 +53,8 @@ Offices in New Delhi \\& New York\\\\
 
 \\section*{{Overview}}
 Subsidy4India has identified various subsidies available for your organisation for your manufacturing unit in {latex_escape(user_data['District'])}, {latex_escape(user_data['Subdistrict'])} \\& {latex_escape(user_data['State'])} and sharing the evaluation report for your perusal which is located in Zone \\textbf{{{latex_escape(zone)}}}.
-\\begin{{itemize}}[leftmargin=1.5em]
+\\begin{{itemize}}
+
   \\item \\textbf{{Name of Scheme:}} Maharashtra Industrial Policy 2019
   \\item \\textbf{{Base of subsidy:}} Subsidy schemes applicable to your company as a MSME / Large / Mega entity
   \\item \\textbf{{Estimated subsidy value:}} Each subsidy has been mentioned in detail in the proposal.
@@ -60,11 +62,12 @@ Subsidy4India has identified various subsidies available for your organisation f
 \\end{{itemize}}
 
 \\section*{{Subsidy Breakdown}} 
-\\begin{{itemize}}[leftmargin=1.5em]
-\\item \\textbf{{(a) Capital investment subsidy (One-time):}} Based on the Maharashtra Industrial Policy 2019 and Package Scheme of Incentives (PSI-2019), the Investment Promotion Subsidy (IPS) is the primary capital subsidy mechanism designed to reimburse State Goods and Services Tax (SGST) paid by eligible industrial units on their first sale of products within Maharashtra. \\\\
-\\item \\textbf{{(b) Stamp Duty Subsidy:}} The stamp duty exemption operates as a 100\\% waiver rather than a reimbursement, meaning eligible units are completely exempt from paying stamp duty during their investment period for specific transactions. \\\\
-\\item Exemption available only during the designated investment period (typically 3-5 years). \\\\
-\\item Exemption applies to initial transactions only, not subsequent transfers. \\\\
+\\begin{{itemize}}
+
+    \\item \\textbf{{(a) Capital investment subsidy (One-time):}} Based on the Maharashtra Industrial Policy 2019 and Package Scheme of Incentives (PSI-2019), the Investment Promotion Subsidy (IPS) is the primary capital subsidy mechanism designed to reimburse State Goods and Services Tax (SGST) paid by eligible industrial units on their first sale of products within Maharashtra. \\\\
+    \\item \\textbf{{(b) Stamp Duty Subsidy:}} The stamp duty exemption operates as a 100\\% waiver rather than a reimbursement, meaning eligible units are completely exempt from paying stamp duty during their investment period for specific transactions. \\\\
+    \\item Exemption available only during the designated investment period (typically 3-5 years). \\\\
+    \\item Exemption applies to initial transactions only, not subsequent transfers. \\\\
 \\item \\textbf{{(c) Interest Subsidy (applicable only when a term loan is availed for the project):}} The Interest Subsidy under the Package Scheme of Incentives 2019 (PSI-2019) provides financial support by subsidizing interest paid on term loans for eligible industrial units with cap amount of electricity bills paid. \\\\
 \\end{{itemize}}
 

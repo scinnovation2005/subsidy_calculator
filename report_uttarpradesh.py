@@ -171,7 +171,7 @@ There will be a sanction provided for each of the subsidy application made which
 
 \\end{{document}}
 """
-    with open("Subsidy_report_up.tex", "w", encoding="utf-8") as f:
+    with open(tex_path, "w", encoding="utf-8") as f:
         f.write(tex_content)
 
     print("Running pdflatex on:", tex_path)

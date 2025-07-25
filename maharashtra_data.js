@@ -15,7 +15,7 @@ export const maharashtraData = {
   "Jalna": ["Ambad", "Badnapur", "Bhokardan", "Ghansawangi", "Jalna", "Mantha", "Partur"],
   "Kolhapur": ["Ajra", "Bhudargad", "Chandgad", "Gadhinglaj", "Hatkanangale", "Karveer", "Panhala", "Radhanagari", "Shahuwadi", "Shirol"],
   "Latur": ["Ahmedpur", "Ausa", "Chakur", "Deoni", "Jalkot", "Latur", "Nilanga", "Renapur", "Shirur Anantpal", "Udgir"],
-  "Mumbai City": ["Mumbai City"],
+  "Greater Mumbai": ["Greater Mumbai"],
   "Mumbai Suburban": ["Andheri", "Borivali", "Kurla"],
   "Nagpur": ["Hingna", "Kamptee", "Katol", "Mauda", "Nagpur (Rural)", "Nagpur (Urban)", "Narkhed", "Parshivni", "Ramtek", "Savner", "Umred"],
   "Nanded": ["Ardhapur", "Bhokar", "Biloli", "Deglur", "Dharmabad", "Hadgaon", "Himayatnagar", "Kandhar", "Kinwat", "Loha", "Mahur", "Mudkhed", "Mukhed", "Nanded", "Naigaon", "Umri"],

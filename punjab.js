@@ -57,7 +57,7 @@ export function renderForm(container) {
     </div>
 
     <div class="form-group">
-      <label for="termLoan">Term Loan Availed(Rs.)</label>
+      <label for="termLoan">Is Term Loan Availed</label>
       <select id="termLoan" name="Term Loan Availed" required>
         <option value="">Select</option>
         <option value="Yes">Yes</option>
