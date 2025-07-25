@@ -22,6 +22,11 @@ zone_data = {
     "Interest eligibility years":[0, 7, 7, 10, 10]
 }
 zone_df = pd.DataFrame(zone_data)
+filtered_df = df[df['State'] == 'Maharashtra']
+if not filtered_df.empty:
+    row = filtered_df.iloc[0]
+else:
+    print("No data found for Maharashtra")
 
 # Calculation logic
 def calculate_subsidy(zone, plant_machinery, building_civil_work, land_cost,
