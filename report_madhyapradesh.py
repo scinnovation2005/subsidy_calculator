@@ -51,7 +51,7 @@ Subsidy4India has identified various subsidies available for your Organization f
 
 \\begin{{itemize}}
   \\item \\textbf{{Name of Scheme:}} The Madhya Pradesh Industrial Promotion Policy 2025
-  \\item \\textbf{{Base of subsidy:}} Subsidy schemes applicable to your company as a MSME / Large / Mega / Super mega / Ultra Mega entity
+  \\item \\textbf{{Base of subsidy:}} Subsidy schemes applicable to your company as a MSME / Large / Mega / Super Mega / Ultra Mega entity
   \\item \\textbf{{Estimated subsidy value:}} Each subsidy has been mentioned in detail in the proposal.
   \\item \\textbf{{Date of start of commercial production:}} Subsidies apply only to investments made by 2028–29. \\\\
   This framework aims to attract Rs. 5.4–5.9 lakh crore in industrial investment by 2028–29 while generating Rs. 20 lakh jobs.

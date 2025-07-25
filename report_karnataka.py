@@ -37,8 +37,8 @@ Offices in New Delhi \\& New York\\\\
 
 \\vspace{{1em}}
 \\begin{{itemize}}
-  \item {user_data['Organization Name']} \\
-  \item {user_data['Subdistrict']}, {user_data['District']}, {user_data['State']} \\
+  \\item {user_data['Organization Name']} \\\\
+  \\item {user_data['Subdistrict']}, {user_data['District']}, {user_data['State']} \\\\
 \\end{{itemize}}
 \\textbf{{Attn.:}} {user_data['Name']}
 
@@ -54,9 +54,11 @@ Subsidy4India has identified various subsidies available for your Organization f
 
 \\section*{{Subsidy Breakdown}}
 \\begin{{itemize}}[leftmargin=1.5em]
-    \\textbf{{1. Asset Creation Incentives (You can choose only one of the following)}}
-    \\textbf{{(a) Capital investment subsidy (One-time):}} According to MSME Policy 2024, Plastic alternative, Agricultural and Food processing industries will get subsidy 50\\% of their capital investment with the cap of Rs. 40 lakhs and Rs. 1.5 Crore respectively.
-    \\textbf{{(b) SGST reimbursement:}} Kindly note that you can avail SGST reimbursement on the capital investment for 7 years. SGST reimbursement calculation will be strictly available on capital investment made.
+  \\item \\textbf{{1. Asset Creation Incentives (You can choose only one of the following)}}
+  \\begin{{itemize}}
+    \\item \\textbf{{(a) Capital investment subsidy (One-time):}} According to MSME Policy 2024, Plastic alternative, Agricultural and Food processing industries will get subsidy 50\\% of their capital investment with the cap of Rs. 40 lakhs and Rs. 1.5 Crore respectively.
+    \\item \\textbf{{(b) SGST reimbursement:}} Kindly note that you can avail SGST reimbursement on the capital investment for 7 years. SGST reimbursement calculation will be strictly available on capital investment made.
+  \\end{{itemize}}
 \\end{{itemize}}
 
 \\begin{{longtable}}{{|p{{4.5cm}}|p{{4.5cm}}|p{{2.5cm}}|p{{4.5cm}}|}}
@@ -74,9 +76,11 @@ Stamp Duty Subsidy & Rs. {result['stamp_duty_subsidy']} & One-time & Based on zo
 \\end{{longtable}}
 
 \\begin{{itemize}}[leftmargin=1.5em]
-    \\textbf{{2. Other incentives:}}
-    \\textbf{{(a) Interest Subsidy (applicable only when a term loan is availed for the project):}} In Karnataka, interest subsidy is provided to MSMEs in Zone A and Zone B only to promote technology adoption and reduce the cost of finance for new and expanding enterprises.
-    \\textbf{{(b) Stamp Duty Subsidy:}} The Karnataka Industrial Policy 2025--30 provides differentiated stamp duty exemptions based on the industrial zone classification.
+  \\item \\textbf{{2. Other incentives:}}
+  \\begin{{itemize}}
+    \\item \\textbf{{(a) Interest Subsidy (applicable only when a term loan is availed for the project):}} In Karnataka, interest subsidy is provided to MSMEs in Zone A and Zone B only to promote technology adoption and reduce the cost of finance for new and expanding enterprises.
+    \\item \\textbf{{(b) Stamp Duty Subsidy:}} The Karnataka Industrial Policy 2025--30 provides differentiated stamp duty exemptions based on the industrial zone classification.
+  \\end{{itemize}}
 \\end{{itemize}}
 
 \\begin{{longtable}}{{|p{{4cm}}|p{{4cm}}|p{{4cm}}|p{{4cm}}|}}
@@ -93,35 +97,35 @@ Stamp Duty Subsidy & Rs. {result['stamp_duty_subsidy']} & One Time & Post produc
 
 \\section*{{Other Key Subsidies \\& Incentives}}
 \\begin{{itemize}}[leftmargin=1.5em]
-    \\textbf{{1. Reimbursement of Land Conversion Fee}}
-        \\begin{{itemize}}
-            \\item Zone 1: 100\\% reimbursement after commencement of commercial production
-            \\item Zone 2: 100\\% reimbursement after commencement of commercial production
-            \\item Zone 3: NIL
-        \\end{{itemize}}
+  \\item \\textbf{{1. Reimbursement of Land Conversion Fee}}
+  \\begin{{itemize}}
+    \\item Zone 1: 100\\% reimbursement after commencement of commercial production
+    \\item Zone 2: 100\\% reimbursement after commencement of commercial production
+    \\item Zone 3: NIL
+  \\end{{itemize}}
 
   \\item Eligible Entities: Proprietorships, partnerships, companies, LLPs, co-operatives, etc.
 
-    \\textbf{{2. Employment Generation Booster}}
+  \\item \\textbf{{2. Employment Generation Booster}}
+  \\begin{{itemize}}
+    \\item Incentive for Extra Employment:
     \\begin{{itemize}}
-        \\item Incentive for Extra Employment:
-            \\begin{{itemize}}
-              \\item 3x--4x minimum required employment: 7.5\\% booster on eligible incentive amount
-              \\item 4x--5x: 10\\% booster
-              \\item 5x: 15\\% booster
-            \\end{{itemize}}
+      \\item 3x--4x minimum required employment: 7.5\\% booster on eligible incentive amount
+      \\item 4x--5x: 10\\% booster
+      \\item 5x: 15\\% booster
+    \\end{{itemize}}
     \\item Applicability: All zones, for projects exceeding minimum employment thresholds
   \\end{{itemize}}
 
-    \\textbf{{3. Women Workforce Participation Incentive}}
+  \\item \\textbf{{3. Women Workforce Participation Incentive}}
+  \\begin{{itemize}}
+    \\item For Large, Mega, and Ultra Mega Enterprises:
     \\begin{{itemize}}
-        \\item For Large, Mega, and Ultra Mega Enterprises:
-        \\begin{{itemize}}
-          \\item $\\geq$ 50\\% women employees: 7.5\\% booster on eligible incentive amount
-          \\item $\\geq$ 60\\% women: 10\\% booster
-          \\item $\\geq$ 70\\% women: 15\\% booster
-        \\end{{itemize}}
-        \\item Objective: Promote gender diversity in industrial workforce
+      \\item $\\geq$ 50\\% women employees: 7.5\\% booster on eligible incentive amount
+      \\item $\\geq$ 60\\% women: 10\\% booster
+      \\item $\\geq$ 70\\% women: 15\\% booster
+    \\end{{itemize}}
+    \\item Objective: Promote gender diversity in industrial workforce
   \\end{{itemize}}
 \\end{{itemize}}
 
@@ -160,14 +164,14 @@ Stamp Duty Subsidy & Rs. {result['stamp_duty_subsidy']} & One Time & Post produc
 """
 
     with open(tex_path, "w", encoding="utf-8") as f:
-            f.write(tex_content)
+        f.write(tex_content)
 
     result = subprocess.run(
-            ["pdflatex", "-interaction=nonstopmode", "-output-directory", output_dir, tex_path],
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            text=True
-        )
+        ["pdflatex", "-interaction=nonstopmode", "-output-directory", output_dir, tex_path],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        text=True
+    )
 
     if result.returncode != 0:
         print("PDF generation failed!")

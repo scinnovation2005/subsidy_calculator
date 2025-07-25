@@ -13,7 +13,7 @@ zone_data = {
 #Zone C: Category III Taluka & Municipal Corp
 
     "A":{
-        "Enterprise Size":["Micro","Small","Medium","Large", "Mega", "Ultra Mega", "Super Mega"],
+        "Enterprise Size":["Micro","Small","Medium","Large","Mega","Ultra Mega","Super Mega"],
         "Capital Subsidy(%)":[25, 0, 0, 10, 0, 0, 0],
         "Interest rate(%)":[7]*7,
         "Interest eligible years":[7, 7, 7, 10, 10, 10, 10],
@@ -23,7 +23,7 @@ zone_data = {
         "SGST max(%)": [7.5, 7.5, 7.5, 7.5, 0.9, 0.9, 0.9]
     },
     "B":{
-        "Enterprise Size":["Micro","Small","Medium","Large", "Mega","Ultra Mega", "Super Mega"],
+        "Enterprise Size":["Micro","Small","Medium","Large", "Mega","Ultra Mega","Super Mega"],
         "Capital Subsidy(%)":[20, 0, 0, 8, 0, 0, 0],
         "Interest rate(%)":[6]*7,
         "Interest eligible years":[6, 6, 6, 8, 10, 10, 10], 
@@ -33,7 +33,7 @@ zone_data = {
         "SGST max(%)":[6.5, 6.5, 6.5, 6, 0.9, 0.9, 0.9]
     },
     "C":{
-        "Enterprise Size":["Micro","Small","Medium","Large", "Mega","Ultra Mega", "Super Mega"],
+        "Enterprise Size":["Micro","Small","Medium","Large","Mega","Ultra Mega","Super Mega"],
         "Capital Subsidy(%)":[10, 0, 0, 4, 0, 0, 0],
         "Interest rate(%)":[5]*7, 
         "Interest eligible years":[5, 5, 5, 6, 10, 10, 10],
@@ -48,8 +48,8 @@ zone_data = {
 def calculate_subsidy(zone, enterprise_size, plant_machinery, building_civil_work, land_cost, term_loan_amount):
 
     zone_info = zone_data.get(zone)
-    index = zone_info["Enterprise Size"].index(enterprise_size.strip().capitalize())
-    enterprise_size = enterprise_size.strip().capitalize()
+    enterprise_size = enterprise_size.strip().title()
+    index = zone_info["Enterprise Size"].index(enterprise_size)
     
     capital_investment = plant_machinery + building_civil_work
 

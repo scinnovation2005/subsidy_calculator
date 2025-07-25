@@ -53,7 +53,7 @@ Subsidy4India has identified various subsidies available for your Organization f
 
 \\begin{{itemize}}[leftmargin=1.5em]
   \\item \\textbf{{Name of Scheme:}} Industrial Investment & Employment Promotion Policy 2022
-  \\item \\textbf{{Base of subsidy:}} Subsidy schemes applicable to your company as a MSME / Large / Mega / Super mega / Ultra Mega entity
+  \\item \\textbf{{Base of subsidy:}} Subsidy schemes applicable to your company as a MSME / Large / Mega / Super Mega / Ultra Mega entity
   \\item \\textbf{{Estimated subsidy value:}} Each subsidy has been mentioned in detail in the proposal.
   \\item \\textbf{{Date of start of commercial production:}} Subsidies apply only to investments made during the policy period (2022–2027)
 \\end{{itemize}}

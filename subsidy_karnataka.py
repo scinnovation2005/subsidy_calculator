@@ -33,8 +33,9 @@ def calculate_subsidy(zone, enterprise_size, plant_machinery, building_civil_wor
                       term_loan_amount):
 
     zone_info = zone_data.get(zone)
-    index = zone_info["Enterprise Size"].index(enterprise_size.strip().capitalize())
-    enterprise_size = enterprise_size.strip().capitalize()
+    enterprise_size = enterprise_size.strip().title()
+    index = zone_info["Enterprise Size"].index(enterprise_size)
+
     capital_investment = plant_machinery + building_civil_work
 
     capital_subsidy = 0
@@ -46,7 +47,6 @@ def calculate_subsidy(zone, enterprise_size, plant_machinery, building_civil_wor
     capital_subsidy =(zone_info[ "Capital Subsidy(%)"][index] /100)* capital_investment
 
     # Production linked incentives PLI
-
     sgst_rate = (zone_info["PLI(%)"][index])
     sgst_amount = (sgst_rate/100) * turn_over  
 
