@@ -39,7 +39,7 @@ Offices in New Delhi \\& New York\\\\
 
 \\begin{{itemize}}
     \\textbf{{Organization:}} {user_data['Organization Name']} \\\\
-    \\textbf{{Location:}} {(user_data['Subdistrict'])}, {(user_data['District'])}, {(user_data['State'])} \\\\
+    \\textbf{{Location:}} {(user_data['District'])}, {(user_data['State'])} \\\\
     \\textbf{{Attn.:}} {user_data['Name']}
 \\end{{itemize}}
 
