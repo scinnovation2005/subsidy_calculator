@@ -36,12 +36,11 @@ Offices in New Delhi \\& New York\\\\
 \\textbf{{Date: {pd.Timestamp.now().strftime('%d-%m-%Y')}}}
 
 \\vspace{{1em}}
-
-{user_data['Organization Name']} \\\\
-{user_data['Subdistrict']}, {user_data['District']}, {user_data['State']} \\\\
+\\begin{{itemize}}
+  \item {user_data['Organization Name']} \\
+  \item {user_data['Subdistrict']}, {user_data['District']}, {user_data['State']} \\
+\\end{{itemize}}
 \\textbf{{Attn.:}} {user_data['Name']}
-
-\\vspace{{1em}}
 
 \\section*{{Overview}}
 Subsidy4India has identified various subsidies available for your Organization for your manufacturing unit in {user_data['District']}, {user_data['Subdistrict']} \\& {user_data['State']}, located in Zone \\textbf{{{zone}}}.
