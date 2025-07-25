@@ -32,8 +32,13 @@ def generate_report_haryana(user_data, result, zone, zone_info):
 \\usepackage{{longtable}}
 \\usepackage{{enumitem}}
 \\usepackage{{hyperref}}
+\\usepackage{{graphicx}}
 
 \\begin{{document}}
+
+\\begin{{flushright}}
+\\includegraphics[width=3cm]{{S4I_logo.png}}
+\\end{{flushright}}
 
 \\begin{{center}}
 \\Huge\\textbf{{Subsidy4India, a venture of SCPL}}\\\\[0.5em]

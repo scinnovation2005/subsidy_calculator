@@ -24,8 +24,13 @@ def generate_report_karnataka(user_data, result, zone):
 \\usepackage{{longtable}}
 \\usepackage{{enumitem}}
 \\usepackage{{textcomp}}
+\\usepackage{{graphicx}}
 
 \\begin{{document}}
+
+\\begin{{flushright}}
+\\includegraphics[width=3cm]{{S4I_logo.png}}
+\\end{{flushright}}
 
 \\begin{{center}}
 \\Huge\\textbf{{Subsidy4India, a venture of SCPL}}\\\\[0.5em]

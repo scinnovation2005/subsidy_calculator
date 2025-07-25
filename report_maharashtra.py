@@ -36,6 +36,10 @@ def generate_report_maharashtra(user_data, result, zone):
 
 \\begin{{document}}
 
+\\begin{{flushright}}
+\\includegraphics[width=3cm]{{S4I_logo.png}}
+\\end{{flushright}}
+
 \\begin{{center}}
 \\Huge\\textbf{{Subsidy4India, a venture of SCPL}}\\\\[0.5em]
 \\large 305, Regent Chambers, Nariman Point, Mumbai 400021 (INDIA)\\\\

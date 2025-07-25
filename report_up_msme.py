@@ -28,8 +28,13 @@ def generate_report_up_msme(user_data, result, zone):
 \\usepackage{{array}}
 \\usepackage{{longtable}}
 \\usepackage{{enumitem}}
+\\usepackage{{graphicx}}
 
 \\begin{{document}}
+
+\\begin{{flushright}}
+\\includegraphics[width=3cm]{{S4I_logo.png}}
+\\end{{flushright}}
 
 \\begin{{center}}
 \\Huge\\textbf{{Subsidy4India, a venture of SCPL}}\\\\[0.5em]
