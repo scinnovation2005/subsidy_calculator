@@ -12,7 +12,7 @@ df['District'] = df['District'].str.strip().str.lower()
 # Zone configuration
 zone_data = { "Zone":["A","B","C"],
     "A": {
-        "Enterprise Size": ["Large", "Mega", "Super Mega", "Ultra-Mega"],
+        "Enterprise Size": ["Large", "Mega", "Super Mega", "Ultra Mega"],
         "Capital Investment Subsidy(%)": [10, 15, 20, 25],
         "Stamp Duty (%)": [0.50]*4,
         "SGST Reimbursement (%)": [100, 100, 100, 100],
@@ -20,7 +20,7 @@ zone_data = { "Zone":["A","B","C"],
         "SGST Reimbursement Max (%)": [60, 70, 80, 90],
     },
     "B": {
-        "Enterprise Size": ["Large", "Mega", "Super Mega", "Ultra-Mega"],
+        "Enterprise Size": ["Large", "Mega", "Super Mega", "Ultra Mega"],
         "Capital Investment Subsidy(%)": [15, 20, 25, 30],
         "Stamp Duty (%)": [0.75]*4,
         "SGST Reimbursement (%)": [100, 100, 100, 100],
@@ -28,7 +28,7 @@ zone_data = { "Zone":["A","B","C"],
         "SGST Reimbursement Max (%)": [60, 70, 80, 90],
     },
     "C": {
-        "Enterprise Size": ["Large", "Mega", "Super Mega", "Ultra-Mega"],
+        "Enterprise Size": ["Large", "Mega", "Super Mega", "Ultra Mega"],
         "Capital Investment Subsidy(%)": [20, 25, 30, 35],
         "Stamp Duty (%)": [1.00]*4,
         "SGST Reimbursement (%)": [100, 100, 100, 100],

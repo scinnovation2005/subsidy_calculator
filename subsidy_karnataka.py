@@ -9,22 +9,22 @@ df['Subdistrict'] = df['Subdistrict'].str.strip().str.lower()
 # Zone data
 zone_data = {
     "A":{
-        "Enterprise Size":["Micro","Small","Medium","Large", "Mega","Ultra-Mega"],
-        "Capital Subsidy(%)":[30, 25, 20, 25, 25, 25],
-        "PLI(%)":[2.5]*6, #cap 60%
-        "Stamp Duty(%)": [100]*6,
+        "Enterprise Size":["Micro","Small","Medium","Large", "Mega","Ultra Mega", "Super Mega"],
+        "Capital Subsidy(%)":[30, 25, 20, 25, 25, 25, 0],
+        "PLI(%)":[2.5]*7, #cap 60%
+        "Stamp Duty(%)": [100]*7,
     },
     "B":{
-        "Enterprise Size":["Micro","Small","Medium","Large", "Mega","Ultra-Mega"],
-        "Capital Subsidy(%)":[25, 20, 15, 20, 20, 20],
-        "PLI(%)":[2.0]*6, #cap 60%
-        "Stamp Duty(%)": [100]*6,
+        "Enterprise Size":["Micro","Small","Medium","Large", "Mega","Ultra Mega", "Super Mega"],
+        "Capital Subsidy(%)":[25, 20, 15, 20, 20, 20, 0],
+        "PLI(%)":[2.0]*7, #cap 60%
+        "Stamp Duty(%)": [100]*7,
     },
     "C":{
-        "Enterprise Size":["Micro","Small","Medium","Large", "Mega","Ultra-Mega"],
-        "Capital Subsidy(%)":[10, 10, 5, 10, 10, 10],
-        "PLI(%)":[1.0]*6, #cap 60%
-        "Stamp Duty(%)": [75]*6,
+        "Enterprise Size":["Micro","Small","Medium","Large", "Mega","Ultra Mega","Super Mega"],
+        "Capital Subsidy(%)":[10, 10, 5, 10, 10, 10, 0],
+        "PLI(%)":[1.0]*7, #cap 60%
+        "Stamp Duty(%)": [75]*7,
     }
 }
 

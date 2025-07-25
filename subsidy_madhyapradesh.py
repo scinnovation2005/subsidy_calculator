@@ -9,7 +9,6 @@ def calculate_subsidy(plant_machinery, building_civil_work,
                       term_loan_amount = 0, interest_rate = 0):
 
     capital_investment = plant_machinery + building_civil_work
-    print("Capital investment", capital_investment)
 
     # Capital Subsidy depends on Eligible Fixed Capital Investment(EFCI)
     if capital_investment<=300000000:
@@ -27,8 +26,6 @@ def calculate_subsidy(plant_machinery, building_civil_work,
     else:
         capital_subsidy = 2000000000
 
-    print("Capital subsidy", capital_subsidy)
-
     # No Stamp Duty Subsidy in Madhyapradesh
 
     # Interest Subsidy
@@ -36,17 +33,14 @@ def calculate_subsidy(plant_machinery, building_civil_work,
     interest_paid =  interest_rate * term_loan_amount * 7
     interest_subsidy = min(annual_interest, interest_paid, 100000000) #max 10 crore
 
-    print("Interest Subsidy", interest_subsidy)
     # Total subsidy 
     total_subsidy = capital_subsidy + interest_subsidy
-    print("Total subsidy: ", total_subsidy)
-
+    
     return {
         "capital_investment_subsidy": round(capital_subsidy, 2),
         "interest_subsidy": round(interest_subsidy, 2),
         "total_subsidy": round(total_subsidy, 2)
     }    
-
 
 def process_madhyapradesh(data):
     try:
@@ -63,7 +57,6 @@ def process_madhyapradesh(data):
             term_loan_amount,
             interest_rate
         )
-        print("Calculations: ", result)
 
         # Generate report
         pdf_path = generate_report_mp(data, result)

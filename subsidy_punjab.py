@@ -25,6 +25,8 @@ def calculate_subsidy(enterprise_size, plant_machinery, building_civil_work, lan
     # 100% exemption for MSMEs 
     if enterprise_size in ["Micro", "Small", "Medium", "Large"]:
         stamp_duty_subsidy = 0.07 * land_cost
+    else: 
+        stamp_duty_subsidy = 0 
     
     # Interest Subsidy
     

@@ -69,21 +69,22 @@ def calculate_subsidy(zone, enterprise_size, plant_machinery, building_civil_wor
 
         annual_interest = term_loan_amount * interest_rate
         interest_subsidy = min(annual_interest, 2000000) * 7 
-
     elif enterprise_size in ["Large", "Mega", "Ultra Mega"]:
         interest_rate = 0.05
         annual_interest = interest_rate * term_loan_amount 
         interest_subsidy = min(annual_interest, 0.025 * capital_investment) * 5
+    else: 
+        interest_subsidy = 0 
 
 
     # SGST Reimbursement
-    if enterprise_size in ["Large", "Mega", "Ultra Mega"]:
+    if enterprise_size in ["Large", "Mega", "Ultra Mega", "Super Mega"]:
         sgst_reimbursement = capital_investment * 0.75 * 7
     else:
         sgst_reimbursement = capital_investment * 0.75 * 10
 
     #TLI 
-    if enterprise_size in ["Large", "Mega", "Ultra Mega"]:
+    if enterprise_size in ["Large", "Mega", "Ultra Mega", "Super Mega"]:
         turnover_linked_incentive =  (zone_info["TIL Rate(%)"][index]/100) * turn_over * 10
     else: 
         turnover_linked_incentive = 0

@@ -13,34 +13,34 @@ zone_data = {
 #Zone C: Category III Taluka & Municipal Corp
 
     "A":{
-        "Enterprise Size":["Micro","Small","Medium","Large", "Mega"],
-        "Capital Subsidy(%)":[25, 0, 0, 10, 0],
-        "Interest rate(%)":[7]*5,
-        "Interest eligible years":[7, 7, 7, 10, 10],
-        "Max interest": [3500000, 3500000, 3500000, 0, 0], #cap amount for interest subsidy
-        "SGST reimbursement(%)": [100, 100, 100, 75, 100],
-        "SGST eligibility years":[10, 10, 10, 10, 20],
-        "SGST max(%)": [7.5, 7.5, 7.5, 7.5, 0.9]
+        "Enterprise Size":["Micro","Small","Medium","Large", "Mega", "Ultra Mega", "Super Mega"],
+        "Capital Subsidy(%)":[25, 0, 0, 10, 0, 0, 0],
+        "Interest rate(%)":[7]*7,
+        "Interest eligible years":[7, 7, 7, 10, 10, 10, 10],
+        "Max interest": [3500000, 3500000, 3500000, 0, 0, 0, 0], #cap amount for interest subsidy
+        "SGST reimbursement(%)": [100, 100, 100, 75, 100, 100, 100],
+        "SGST eligibility years":[10, 10, 10, 10, 20, 20, 20],
+        "SGST max(%)": [7.5, 7.5, 7.5, 7.5, 0.9, 0.9, 0.9]
     },
     "B":{
-        "Enterprise Size":["Micro","Small","Medium","Large", "Mega"],
-        "Capital Subsidy(%)":[20, 0, 0, 8, 0],
-        "Interest rate(%)":[6]*5,
-        "Interest eligible years":[6, 6, 6, 8, 10], 
-        "Max interest": [3000000, 3000000, 3000000, 0, 0],
-        "SGST reimbursement(%)":[90, 90, 90, 60, 100],
-        "SGST eligibility years":[10, 10, 10, 10, 20],
-        "SGST max(%)":[6.5, 6.5, 6.5, 6, 0.9]
+        "Enterprise Size":["Micro","Small","Medium","Large", "Mega","Ultra Mega", "Super Mega"],
+        "Capital Subsidy(%)":[20, 0, 0, 8, 0, 0, 0],
+        "Interest rate(%)":[6]*7,
+        "Interest eligible years":[6, 6, 6, 8, 10, 10, 10], 
+        "Max interest": [3000000, 3000000, 3000000, 0, 0, 0, 0],
+        "SGST reimbursement(%)":[90, 90, 90, 60, 100, 100, 100],
+        "SGST eligibility years":[10, 10, 10, 10, 20, 20, 20],
+        "SGST max(%)":[6.5, 6.5, 6.5, 6, 0.9, 0.9, 0.9]
     },
     "C":{
-        "Enterprise Size":["Micro","Small","Medium","Large", "Mega"],
-        "Capital Subsidy(%)":[10, 0, 0, 4, 0],
-        "Interest rate(%)":[5]*5, 
-        "Interest eligible years":[5, 5, 5, 6, 10],
-        "Max interest": [2500000, 2500000, 2500000, 0, 0],
-        "SGST reimbursement(%)":[80, 80, 80, 40, 100],
-        "SGST eligibility years":[10, 10, 10, 10, 20],
-        "SGST max(%)":[5, 5, 5, 4, 0.9]
+        "Enterprise Size":["Micro","Small","Medium","Large", "Mega","Ultra Mega", "Super Mega"],
+        "Capital Subsidy(%)":[10, 0, 0, 4, 0, 0, 0],
+        "Interest rate(%)":[5]*7, 
+        "Interest eligible years":[5, 5, 5, 6, 10, 10, 10],
+        "Max interest": [2500000, 2500000, 2500000, 0, 0, 0, 0],
+        "SGST reimbursement(%)":[80, 80, 80, 40, 100, 100, 100],
+        "SGST eligibility years":[10, 10, 10, 10, 20, 20, 20],
+        "SGST max(%)":[5, 5, 5, 4, 0.9, 0.9, 0.9]
     }
 }
 
