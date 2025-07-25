@@ -21,11 +21,6 @@ zone_data = {
     "Max Interest/Year (Rs.)": [2000000] * 4
 }
 zone_df = pd.DataFrame(zone_data)
-filtered_df = df[df['State'] == 'Haryana']
-if not filtered_df.empty:
-    row = filtered_df.iloc[0]
-else:
-    print("No data found for Haryana")
 
 # Calculation
 def calculate_subsidy(zone, enterprise_size, plant_machinery, building_civil_work,land_cost,
