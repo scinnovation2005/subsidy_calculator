@@ -7,7 +7,7 @@ export const gujaratData = {
   "Bharuch": ["Amod", "Anklesvar", "Bharuch", "Hansot", "Jambusar", "Jhagadia", "Netrang", "Vagra", "Valia"],
   "Bhavnagar": ["Bhavnagar", "Gariadhar", "Ghogha", "Jesar", "Mahuva", "Palitana", "Sihor", "Talaja", "Umrala", "Vallabhipur"],
   "Botad": ["Barwala", "Botad", "Gadhada", "Ranpur"],
-  "Chhota Udepur": ["Bodeli*", "Chhota Udepur", "Jetpur Pavi", "Kavant", "Nasvadi", "Sankheda"],
+  "Chhota Udepur": ["Bodeli", "Chhota Udepur", "Jetpur Pavi", "Kavant", "Nasvadi", "Sankheda"],
   "Devbhumi Dwarka": ["Bhanvad", "Kalyanpur", "Khambhalia"],
   "Dahod": ["Dahod", "Devgadbaria", "Dhanpur", "Fatepura", "Garbada", "Jhalod", "Limkheda", "Sanjeli", "Singvad"],
   "Gandhinagar": ["Dehgam", "Gandhinagar", "Kalol"],
