@@ -13,6 +13,11 @@ def calculate_subsidy(zone, enterprise_size, plant_machinery, building_civil_wor
     enterprise_size = enterprise_size.strip().capitalize()
     capital_investment = plant_machinery + building_civil_work
 
+    capital_subsidy = 0 
+    sgst_reimbursement = 0 
+    interest_subsidy = 0 
+    stamp_duty_subsidy = 0 
+
     # Capital Subsidy 
     if enterprise_size in ["Small", "Medium"]:
         capital_subsidy = min(0.25 * capital_investment, 15000000)

@@ -10,6 +10,9 @@ def calculate_subsidy(plant_machinery, building_civil_work,
 
     capital_investment = plant_machinery + building_civil_work
 
+    capital_subsidy = 0 
+    interest_subsidy = 0 
+
     # Capital Subsidy depends on Eligible Fixed Capital Investment(EFCI)
     if capital_investment<=300000000:
         capital_subsidy= min(0.40 * capital_investment, 120000000)
