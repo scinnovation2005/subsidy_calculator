@@ -33,8 +33,8 @@ def calculate_subsidy(zone, enterprise_size, plant_machinery, building_civil_wor
                       term_loan_amount, turn_over):
     
     zone_info = zone_data.get(zone)
-    index = zone_info["Enterprise Size"].index(enterprise_size.strip().capitalize())
-    enterprise_size = enterprise_size.strip().capitalize()
+    index = zone_info["Enterprise Size"].index(enterprise_size.strip())
+    enterprise_size = enterprise_size.strip()
 
     capital_investment = plant_machinery + building_civil_work
 

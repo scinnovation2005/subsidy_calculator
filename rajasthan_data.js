@@ -7,7 +7,7 @@ export const rajasthanData = {
     "Barmer": ["Barmer", "Barmer Rural", "Chohtan", "Dhanau", "Gudha Malani", "Nokhda", "Dhorimana", "Gadra Road", "Ramsar", "Serwa", "Sheo"],
     "Beawar": ["Bijaynagar", "Raipur", "Badnor", "Todagarh", "Beawar", "Jaitaran"],
     "Bharatpur": ["Bhusawar", "Nadbai", "Uchchain", "Weir"],
-    "Bhilwara": ["Manda(garh", "Raipur", "Sahra"],
+    "Bhilwara": ["Mandangarh", "Raipur", "Sahra"],
     "Bikaner": ["Lunkaransar", "Nokha", "Pungal", "Sri Dungargarh"],
     "Bundi": ["Nainwa", "lndragarh Keshoraipatan"],
     "Chittorgarh": ["Badi Sadri", "Bhoopal Sagar", "Dungla", "Gangrar", "Rashmi"],

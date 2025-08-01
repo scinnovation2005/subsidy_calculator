@@ -63,7 +63,7 @@ Subsidy4India has identified various subsidies available for your Organization f
 \\begin{{itemize}}[leftmargin=1.5em]
     \\item \\textbf{{(a)Capital investment subsidy (One-time):}} According to MSME Policy 2024, Plastic alternative, Agricultural and Food processing industries will get subsidy 50\\% of their capital investment with the cap of Rs. 40 lakhs and Rs. 1.5 Crore respectively. 
     \\item \\textbf{{(b)Turnover-linked Incentives: }}Large, Mega and Ultra-mega industries are eligible to get Turnover-linked Incentives based on net sales turnover for 10 years.
-    \\item \\textbf{{(c)SGST reimbursement: }}Kindly note that you can avail SGST reimbursement 75\\% of the capital investment made for 7 years and 10 years for MSME and Large, Mega, Ultra mega enterprises respectively.
+    \\item \\textbf{{(c)SGST reimbursement: }}Kindly note that you can avail SGST reimbursement 75\\% of the capital investment made for 7 years and 10 years for MSME and Large, Mega, Ultra Mega enterprises respectively.
     \\item \\textbf{{Stamp Duty Subsidy is not available for Rajasthan}}
 \\end{{itemize}}
 

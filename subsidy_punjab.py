@@ -7,7 +7,7 @@ from report_punjab import generate_report_punjab
 def calculate_subsidy(enterprise_size, plant_machinery, building_civil_work, land_cost,
                       term_loan_amount):
 
-    enterprise_size = enterprise_size.strip().capitalize()
+    enterprise_size = enterprise_size.strip()
     capital_investment = plant_machinery + building_civil_work
 
     capital_subsidy = 0

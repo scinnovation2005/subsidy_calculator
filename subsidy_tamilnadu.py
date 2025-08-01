@@ -10,7 +10,7 @@ df['District'] = df['District'].str.strip().str.lower()
 def calculate_subsidy(zone, enterprise_size, plant_machinery, building_civil_work, land_cost,
                       term_loan_amount):
 
-    enterprise_size = enterprise_size.strip().capitalize()
+    enterprise_size = enterprise_size.strip()
     capital_investment = plant_machinery + building_civil_work
 
     capital_subsidy = 0 
